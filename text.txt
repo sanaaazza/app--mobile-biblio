@@ -1,0 +1,11 @@
+II- Filter et Projecter Les donnes
+1 - db.restaurants.find({borough:'Manhattan'})
+2 - db.restaurants.find({borough:'Manhattan',cuisine:'Moroccan'})
+3 - db.restaurants.find({borough:'Manhattan',cuisine:'Moroccan'},{_id:0,name:1})
+4 - db.restaurants.find({borough:'Manhattan',cuisine:'Seafood'})
+5 - db.restaurants.find( { name: { $regex: /ces$/i } }, { _id: 0, name: 1, cuisine: 1, borough: 1 })
+6 - db.restaurants.find({ borough: "Manhattan", $or: [ { cuisine: "American" }, { cuisine: "Chinese" }]})
+7 - db.restaurants.find({'address.street':{$exists:false}}).count()
+8 - db.restaurants.find({cuisine:"Italian",name: { $regex:/Pizza/}, grades:{$not:{$elemMatch:{score:{$gte: 10}}}}})
+9 - db.restaurants.find({cuisine:"Italian",name: { $regex:/Pizza/}, grades:{$elemMatch:{grade:'C'}}})
+10 -db.restaurants.find({cuisine: "Italian",name: { $regex: /Pizza/ },grades: {$elemMatch: {grade: "C",score: { $lt: 30 }}}})
