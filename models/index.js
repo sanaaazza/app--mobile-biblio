@@ -4,7 +4,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 
 
 // Créer une instance de Sequelize pour se connecter à la base de données
-const sequelize = new Sequelize('mysql://root:root@localhost:3306/db_test');
+const sequelize = new Sequelize('mysql://root:1147896325@localhost:3306/book_app_db');
 
 // Importer les modèles
 const User = require('./user')(sequelize, DataTypes);

@@ -25,12 +25,12 @@ const { sequelize, User, Book, Borrow } = require('./models');
 async function createDefaultAdmin() {
   const adminEmail = 'admin@admin.com';
 
-  // await User.create({
-  //   name: 'Admin',
-  //   email: adminEmail,
-  //   password: 'admin123',
-  //   role: 'admin'
-  // });
+  await User.create({
+  name: 'Admin',
+  email: adminEmail,
+  password: 'admin123',
+  role: 'admin'
+   });
 
   console.log('Admin créé par défaut');
 }
